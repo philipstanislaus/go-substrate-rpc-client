@@ -24,8 +24,8 @@ const (
 	SubKeySign      = "sign-blob"
 
 	// Adjust below params according to your env + chain state + requirement
-	EndPoint = "127.0.0.1"
-	// EndPoint = "172.42.0.2"
+	//EndPoint = "127.0.0.1"
+	EndPoint = "172.42.0.2"
 	RPCPort = "9933"
 	WSPort  = "9944"
 
@@ -217,7 +217,7 @@ func main() {
 				}
 
 				// fmt.Println("submitting new anchor with anchor ID", a.AnchorIDHex())
-				res, err := authRPC.SubmitExtrinsic(nonce, AnchorCommit, ap)
+				res, err = authRPC.SubmitExtrinsic(nonce, AnchorCommit, ap)
 				if err != nil {
 					fmt.Printf("FAIL!!! commit for anchor ID %s failed with %s\n", aID, err.Error())
 					break

@@ -1,7 +1,7 @@
 # Note: We don't use Alpine and its packaged Rust/Cargo because they're too often out of date,
 # preventing them from being used to build Substrate/Polkadot.
 
-FROM cd544298d051
+FROM vimukthicent/subkey:latest
 
 # gcc for cgo
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -89,6 +89,7 @@ WORKDIR $GOPATH
 # VOLUME ["/data"]
 
 # CMD ["/usr/local/bin/substrate"]
+
 
 RUN mkdir -p $GOPATH/src/github.com/centrifuge/go-substrate-rpc-client
 WORKDIR $GOPATH/src/github.com/centrifuge/go-substrate-rpc-client

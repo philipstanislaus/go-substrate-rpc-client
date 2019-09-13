@@ -26,8 +26,9 @@ services:
       - --dev
       - --ws-external
       - --rpc-external
-  rpc-client-tests:
-    build: .
+  rpc-client-tests3:
+    image: vimukthicent/substrate-rpc:latest
+    # build: .
     # ports:
     #   - 40000:40000
     # security_opt:
